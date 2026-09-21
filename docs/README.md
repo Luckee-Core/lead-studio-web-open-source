@@ -16,10 +16,6 @@ Copy and positioning for Lead Studio UI/landing: **`mentorai-server/data/context
 
 Add new top-level doc folders here (playbooks, runbooks) and link them from this file when they are stable.
 
-## Email sending
-
-See **`mentorai-server/data/how-to/lead-studio-email-sending.md`** — Workspace service account on express (no Gmail OAuth connect in the web app). In-app checklist: `/settings/email`.
-
 ## API server
 
 Lead Studio OSS web calls this Express API directly via `NEXT_PUBLIC_SERVER_URL` (dev default `http://localhost:3032`).
@@ -39,9 +35,9 @@ Legacy `mentorai-server` Luckee-only routes removed from the private server (res
 
 **Implemented in `src/app/(dashboard)/` today** (representative paths):
 
-`/dashboard`, `/leads`, `/leads/find`, `/leads/to-call-log`, `/lead-detail-page`, `/lead-contacts`, `/lead-contact-detail-page`, `/lead-emails`, `/lead-emails/queue`, `/lead-emails/sent`, `/settings/email`
+`/dashboard`, `/leads`, `/leads/find`, `/leads/to-call-log`, `/lead-detail-page`, `/lead-contacts`, `/lead-contact-detail-page`
 
-**`routes.ts` exports** (`DASHBOARD_PATH`, `FIND_LEADS_PATH`, `LEAD_DETAIL_PATH`, `TO_CALL_LOG_PATH`, email paths, `LEAD_CONTACT_DETAIL_PATH`) match the segments above. Contact detail navigation uses Redux + a static path: see [ADR 008](../.cursor/architecture/008-detail-page-routing.md) and `openLeadContactDetailThunk` (set `currentLeadContact`, then `router.push(LEAD_CONTACT_DETAIL_PATH)`). External marketing links live in **`src/config/landing-links.ts`**. When you add or remove a route, update **`routes.ts`**, **`landing-links.ts`** (if applicable), and this list.
+**`routes.ts` exports** (`DASHBOARD_PATH`, `FIND_LEADS_PATH`, `LEAD_DETAIL_PATH`, `TO_CALL_LOG_PATH`, `LEAD_CONTACT_DETAIL_PATH`) match the segments above. Contact detail navigation uses Redux + a static path: see [ADR 008](../.cursor/architecture/008-detail-page-routing.md) and `openLeadContactDetailThunk` (set `currentLeadContact`, then `router.push(LEAD_CONTACT_DETAIL_PATH)`). External marketing links live in **`src/config/landing-links.ts`**. When you add or remove a route, update **`routes.ts`**, **`landing-links.ts`** (if applicable), and this list.
 
 ## Related
 

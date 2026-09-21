@@ -7,7 +7,6 @@ import { Contacts } from './contacts';
 import { ResearchSummarySection } from './at-a-glance';
 import { ResearchOnlineProfilesSection } from './online-profiles';
 import { CostsTable } from './costs';
-import { EmailFab } from './email-fab';
 
 export const LeadDetailPage = () => {
   const lead = useAppSelector((state) => state.currentLead);
@@ -36,7 +35,6 @@ export const LeadDetailPage = () => {
         <CostsTable />
       </div>
       <EditModal />
-      <EmailFab />
     </div>
   );
 };

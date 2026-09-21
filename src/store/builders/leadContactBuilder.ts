@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-export type LeadContactTab = 'Notes' | 'Emails';
+export type LeadContactTab = 'Notes';
 
 type LeadContactBuilderState = {
   isMenuOpen: boolean;
@@ -9,10 +9,6 @@ type LeadContactBuilderState = {
   isSaving: boolean;
   isUpdatingStatus: boolean;
   activeTab: LeadContactTab;
-  queueStatus: {
-    status: 'queued' | 'sending' | 'sent' | 'failed';
-    id: string;
-  } | null;
 };
 
 const initialState: LeadContactBuilderState = {
@@ -22,7 +18,6 @@ const initialState: LeadContactBuilderState = {
   isSaving: false,
   isUpdatingStatus: false,
   activeTab: 'Notes',
-  queueStatus: null,
 };
 
 const leadContactBuilderSlice = createSlice({
@@ -43,12 +38,6 @@ const leadContactBuilderSlice = createSlice({
     },
     setUpdatingStatus: (state, action: PayloadAction<boolean>) => {
       state.isUpdatingStatus = action.payload;
-    },
-    setQueueStatus: (
-      state,
-      action: PayloadAction<LeadContactBuilderState['queueStatus']>
-    ) => {
-      state.queueStatus = action.payload;
     },
     setActiveTab: (state, action: PayloadAction<LeadContactTab>) => {
       state.activeTab = action.payload;

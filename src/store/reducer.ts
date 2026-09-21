@@ -6,24 +6,17 @@ import {
   leadCategories,
   leadContactActivities,
   leadContactChat,
-  leadContactEmailAttachments,
-  leadContactEmailQueue,
-  leadContactEmails,
   leadContacts,
-  leadSentEmails,
   leads,
   llmModels,
   savedFilters,
   toCallLogs,
-  coldEmailOfferings,
-  emailSendingIdentities,
 } from './dumps';
 
 import {
   currentGoogleMapsScrapeRun,
   currentLead,
   currentLeadContact,
-  currentLeadContactEmail,
 } from './current';
 
 import {
@@ -32,10 +25,7 @@ import {
   googleMapsScraperBuilder,
   leadBuilder,
   leadContactBuilder,
-  leadContactEmailBuilder,
   leadContactsFiltersBuilder,
-  leadDetailEmailFab,
-  leadSentEmailsBuilder,
   leadsFiltersBuilder,
   toCallLogBuilder,
 } from './builders';
@@ -43,7 +33,7 @@ import {
 import { leadsFilters, leadContactsFilters } from './filters';
 
 /**
- * Lead Studio root reducer: commercial leads, contacts, email queue, dashboard, and related UI builders only.
+ * Lead Studio root reducer: commercial leads, contacts, dashboard, and related UI builders only.
  */
 const rootReducer = combineReducers({
   leads,
@@ -51,32 +41,22 @@ const rootReducer = combineReducers({
   leadContacts,
   leadActivities,
   leadContactActivities,
-  leadSentEmails,
-  leadContactEmailQueue,
-  leadContactEmails,
   leadContactChat,
-  leadContactEmailAttachments,
   savedFilters,
   llmModels,
   googleMapsScrapeRuns,
   toCallLogs,
-  coldEmailOfferings,
-  emailSendingIdentities,
 
   currentLead,
   currentLeadContact,
-  currentLeadContactEmail,
   currentGoogleMapsScrapeRun,
 
   leadBuilder,
   leadsFiltersBuilder,
   leadContactsFiltersBuilder,
-  leadSentEmailsBuilder,
   leadContactBuilder,
-  leadContactEmailBuilder,
   googleMapsScraperBuilder,
   dashboardBuilder,
-  leadDetailEmailFab,
   breadcrumbBuilder,
   toCallLogBuilder,
 

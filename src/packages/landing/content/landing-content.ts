@@ -6,12 +6,12 @@ export const LANDING_CONTENT: LandingContent = {
     kicker: 'Free software · run it yourself',
     titleLines: ['Keep track of your leads.'],
     subhead:
-      'Find businesses near you and save them to one list. Log calls, queue email, and see the full history on each lead. Open source. You run it. Your data stays in your database.',
+      'Find businesses near you and save them to one list. Log calls and see the full history on each lead. Open source. You run it. Your data stays in your database.',
     primaryCta: 'Open the app',
     secondaryCta: 'Setup guide',
     stats: [
       { label: 'Find', value: 'Businesses near you' },
-      { label: 'Track', value: 'Calls & email' },
+      { label: 'Track', value: 'Calls' },
       { label: 'Price', value: 'Free (MIT)' },
     ],
   },
@@ -28,7 +28,7 @@ export const LANDING_CONTENT: LandingContent = {
   pipeline: {
     kicker: 'List',
     title: 'Sort, filter, and open any lead.',
-    body: 'Group by category. Filter what you are working this week. Open a lead and see contacts, calls, and email on the same page.',
+    body: 'Group by category. Filter what you are working this week. Open a lead and see contacts and calls on the same page.',
     groups: [
       { name: 'Cafés', count: 24, rows: ['Northside Coffee', 'Bluebird Espresso'] },
       { name: 'Trades', count: 41, rows: ['Halton Plumbing', 'Acme Electric'] },
@@ -36,7 +36,7 @@ export const LANDING_CONTENT: LandingContent = {
   },
   outbound: {
     kicker: 'Follow up',
-    title: 'Calls and email stay on the name.',
+    title: 'Calls stay on the name.',
     cards: [
       {
         tag: 'Contacts',
@@ -49,9 +49,9 @@ export const LANDING_CONTENT: LandingContent = {
         body: 'Who to call today. What happened when you did. Still on the same page as the business.',
       },
       {
-        tag: 'Email',
-        title: 'Sent mail',
-        body: 'Write the email, send it when ready, see what went out later without digging through Gmail.',
+        tag: 'Notes',
+        title: 'What happened',
+        body: 'Keep the next step on the contact so you pick up where you left off.',
       },
     ],
   },
@@ -72,7 +72,7 @@ export const LANDING_CONTENT: LandingContent = {
     steps: [
       { title: 'Add names', body: 'Find businesses worth a call and put them in the list.' },
       { title: 'Sort the list', body: 'Group by type. Work the ones that matter this week.' },
-      { title: 'Call and email', body: 'Log the call. Send the mail. It stays on that name.' },
+      { title: 'Call and log', body: 'Log the call. It stays on that name.' },
       { title: 'Pick up next week', body: 'Open the list again. You can see what already happened.' },
     ],
   },
@@ -104,7 +104,7 @@ export const LANDING_CONTENT: LandingContent = {
     rows: [
       { name: 'Northside Coffee Roasters', category: 'Cafés', status: 'New' },
       { name: 'Halton & Sons Plumbing', category: 'Trades', status: 'Called' },
-      { name: 'Meridian Dental Group', category: 'Healthcare', status: 'Emailed' },
+      { name: 'Meridian Dental Group', category: 'Healthcare', status: 'Called' },
       { name: 'Pier 12 Marine Supply', category: 'Retail', status: 'New' },
     ],
     footerLeft: '4 of 218',

@@ -4,5 +4,5 @@
 
 Initial open-source release of Lead Studio web (paired with lead-studio-express-server).
 
-- Dashboard CRM UI, find leads, lead detail research, email queue
+- Dashboard CRM UI, find leads, lead detail research
 - CI: typecheck, lint, build, npm audit

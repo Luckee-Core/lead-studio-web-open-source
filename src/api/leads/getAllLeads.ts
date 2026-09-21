@@ -10,16 +10,6 @@ export const getAllLeads = async (): Promise<ApiResult<Lead[]>> => {
         'Content-Type': 'application/json',
       },
     });
-  if (!result.success && result.httpStatus === 404) {
-    return { success: true, data: [], httpStatus: 404 };
-  }
-  if (!result.success && result.error?.includes('Invalid JSON')) {
-    return {
-      success: false,
-      error: 'API endpoint not found or returned invalid response',
-      httpStatus: result.httpStatus,
-    };
-  }
   if (!result.success || result.httpStatus >= 400) return result;
   return { ...result, data: result.data ?? [] };
 };

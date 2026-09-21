@@ -9,7 +9,6 @@ import { CurrentLeadContactActions } from '../../current';
 import { LeadContactBuilderActions } from '../../builders';
 import { setCurrentLeadThunk } from '../leads/setCurrentLeadThunk';
 import { logLeadContactActivityThunk } from '../lead-contact-activities';
-import { checkQueueStatusThunk } from './checkQueueStatusThunk';
 
 type ResponseType = Promise<200 | 400 | 500>;
 
@@ -53,7 +52,6 @@ export const loadLeadContactDetailThunk = (
           customerName: lead.business_name || 'Unknown customer',
         })
       );
-      void dispatch(checkQueueStatusThunk(contactId));
       return 200;
     } catch (e) {
       const { message, stack } = coerceErrorFields(e);

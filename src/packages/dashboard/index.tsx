@@ -6,7 +6,6 @@ import { AppLayout } from '@/components';
 import { initializeDashboardOnboardingThunk } from '@/store/thunks/dashboard';
 import {
   getAllLeadContactsThunk,
-  getAllLeadSentEmailsThunk,
   getAllLeadsThunk,
   getAllToCallLogThunk,
 } from '@/store/thunks';
@@ -24,7 +23,6 @@ export const Dashboard = () => {
     void dispatch(getAllLeadCategoriesThunk());
     void dispatch(getAllLeadContactsThunk());
     void dispatch(getAllToCallLogThunk());
-    void dispatch(getAllLeadSentEmailsThunk());
   }, [dispatch]);
 
   return (

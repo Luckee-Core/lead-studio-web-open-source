@@ -6,7 +6,6 @@ import { LEAD_DETAIL_PATH } from '@/config/routes';
 import { LeadContactChatColumn } from './chat-column';
 import { LeadContactBuilderColumn } from './builder-column';
 import { LeadContactEditModal } from './edit';
-import { LeadContactEmailModal } from './email-modal';
 
 /**
  * Lead contact studio: chat column + builder column (session context = `currentLeadContact`).
@@ -43,7 +42,6 @@ export const LeadContactDetailPage = () => {
         </div>
       </div>
       <LeadContactEditModal />
-      <LeadContactEmailModal />
     </div>
   );
 };

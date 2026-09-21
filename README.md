@@ -2,7 +2,7 @@
 
 Next.js front end for **Lead Studio** — the self-hosted lead CRM that pairs with [**lead-studio-express-server**](https://github.com/Luckee-Core/lead-studio-express-server).
 
-For **solo founders and owner-operators** still stitching together Google Maps, spreadsheets, and sent-mail folders: discover businesses, track contacts, queue outbound email, and log calls in one self-hosted dashboard. Redux for app state, feature UI in `src/packages`, HTTP clients in `src/api` (browser → Express). Copy and positioning: **`mentorai-server/data/context/lead-studio-copy-voice.md`**.
+For **solo founders and owner-operators** still stitching together Google Maps, spreadsheets, and call logs: discover businesses, track contacts, and log calls in one self-hosted dashboard. Redux for app state, feature UI in `src/packages`, HTTP clients in `src/api` (browser → Express). Copy and positioning: **`mentorai-server/data/context/lead-studio-copy-voice.md`**.
 
 See **`SECURITY.md`** before you point this at anything beyond localhost.
 
@@ -22,8 +22,6 @@ Copy **`.env.example`** → **`.env.local`**. Set **`NEXT_PUBLIC_SERVER_URL`** t
 
 Use **[Luckee Dev Hub](https://github.com/Luckee-Core/luckee-hub)** to run Express + Next.js, open Cursor, and launch Chrome for Lead Studio (and other studios). See **[`scripts/README.md`](scripts/README.md)**.
 
-Outbound email is sent by Express using a Google Workspace **service account** — configure secrets on the server, not in this web app. See **`mentorai-server/data/how-to/lead-studio-email-sending.md`** and the express `src/services/email/README.md` when you wire sending.
-
 ## Repo layout
 
 | Path | What lives here |
@@ -42,7 +40,7 @@ Architecture ADRs: **`.cursor/architecture/README.md`**. Agent rules: **`.cursor
 
 ## Pair with Express
 
-This repo is half of a two-repo setup. The other half is [**lead-studio-express-server**](https://github.com/Luckee-Core/lead-studio-express-server) (Supabase, research workers, email queue).
+This repo is half of a two-repo setup. The other half is [**lead-studio-express-server**](https://github.com/Luckee-Core/lead-studio-express-server) (Supabase, research workers).
 
 | Resource | Link |
 |----------|------|

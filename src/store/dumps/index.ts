@@ -17,20 +17,8 @@ export { LeadContactActivitiesActions } from './leadContactActivities';
 export { default as leadContactChat } from './leadContactChat';
 export { LeadContactChatActions } from './leadContactChat';
 
-export { default as leadContactEmailAttachments } from './leadContactEmailAttachments';
-export { LeadContactEmailAttachmentsActions } from './leadContactEmailAttachments';
-
-export { default as leadContactEmailQueue } from './leadContactEmailQueue';
-export { LeadContactEmailQueueActions } from './leadContactEmailQueue';
-
-export { default as leadContactEmails } from './leadContactEmails';
-export { LeadContactEmailsActions } from './leadContactEmails';
-
 export { default as leadContacts } from './leadContacts';
 export { LeadContactsActions } from './leadContacts';
-
-export { default as leadSentEmails } from './leadSentEmails';
-export { LeadSentEmailsActions } from './leadSentEmails';
 
 export { default as leads } from './leads';
 export { LeadsActions } from './leads';
@@ -43,9 +31,3 @@ export { SavedFiltersActions } from './savedFilters';
 
 export { default as toCallLogs } from './toCallLogs';
 export { ToCallLogsActions } from './toCallLogs';
-
-export { default as coldEmailOfferings } from './coldEmailOfferings';
-export { ColdEmailOfferingsActions } from './coldEmailOfferings';
-
-export { default as emailSendingIdentities } from './emailSendingIdentities';
-export { EmailSendingIdentitiesActions } from './emailSendingIdentities';

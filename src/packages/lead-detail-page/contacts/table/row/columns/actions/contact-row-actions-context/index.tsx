@@ -13,8 +13,7 @@ import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import { createToCallLogThunk } from '@/store/thunks/to-call-log';
 import { deleteLeadContactThunk, updateLeadContactThunk } from '@/store/thunks/lead-contacts';
 import { updateLeadThunk } from '@/store/thunks/leads';
-import { CurrentLeadContactActions, CurrentLeadContactEmailActions } from '@/store/current';
-import { LeadDetailEmailFabActions } from '@/store/builders';
+import { CurrentLeadContactActions } from '@/store/current';
 import type { LeadContact } from '@/model/lead-contact';
 
 export type ContactRowActionsContextValue = {
@@ -24,7 +23,6 @@ export type ContactRowActionsContextValue = {
   menuPosition: { top: number; left: number } | null;
   closeMenu: () => void;
   handleToggleMenu: (event: MouseEvent<HTMLButtonElement>) => void;
-  handleEmailContact: () => void;
   handleEditContact: () => void;
   handleDeleteContact: () => Promise<void>;
   handleOpenCallLogModal: () => void;
@@ -71,19 +69,6 @@ export const ContactRowActionsProvider = (props: ContactRowActionsProviderProps)
     setIsMenuOpen(false);
     setMenuPosition(null);
   }, []);
-
-  const handleEmailContact = useCallback(() => {
-    if (!contact.email || !contact.id || !leadId) return;
-    dispatch(CurrentLeadContactActions.setLeadContact(contact));
-    dispatch(CurrentLeadContactEmailActions.reset());
-    dispatch(
-      CurrentLeadContactEmailActions.updateFields({
-        lead_id: leadId,
-        lead_contact_id: contact.id,
-      }),
-    );
-    dispatch(LeadDetailEmailFabActions.expand());
-  }, [contact, dispatch, leadId]);
 
   const handleDeleteContact = useCallback(async () => {
     if (!contact.id) return;
@@ -187,7 +172,6 @@ export const ContactRowActionsProvider = (props: ContactRowActionsProviderProps)
       menuPosition,
       closeMenu,
       handleToggleMenu,
-      handleEmailContact,
       handleEditContact,
       handleDeleteContact,
       handleOpenCallLogModal,
@@ -207,7 +191,6 @@ export const ContactRowActionsProvider = (props: ContactRowActionsProviderProps)
       menuPosition,
       closeMenu,
       handleToggleMenu,
-      handleEmailContact,
       handleEditContact,
       handleDeleteContact,
       handleOpenCallLogModal,

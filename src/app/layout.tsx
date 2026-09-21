@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: '%s | Lead Studio',
   },
   description:
-    'Find businesses, log calls, and send email from one list. Open-source software you run yourself. Your lead data stays in your database.',
+    'Find businesses and log calls from one list. Open-source software you run yourself. Your lead data stays in your database.',
   icons: {
     icon: [{ url: "/logo.svg", type: "image/svg+xml" }],
     shortcut: "/logo.svg",

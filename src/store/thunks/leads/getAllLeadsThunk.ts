@@ -17,14 +17,7 @@ export const getAllLeadsThunk = (): AppThunk<ResponseType> => {
         return 200;
       }
 
-      if (
-        response.error?.includes('not available yet') ||
-        response.error?.includes('not found')
-      ) {
-        dispatch(LeadsActions.setLeads([]));
-        return 200;
-      }
-
+      console.error('❌ getAllLeadsThunk failed:', response.error, response.httpStatus);
       return mapApiFailureToThunkStatus(response);
     } catch (error: unknown) {
       const { message, stack } = coerceErrorFields(error);

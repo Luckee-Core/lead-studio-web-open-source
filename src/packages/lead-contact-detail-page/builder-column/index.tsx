@@ -2,7 +2,6 @@
 
 import { useMemo } from 'react';
 import { useAppSelector } from '@/store/hooks';
-import { LeadContactEmails } from '../emails/LeadContactEmails';
 import { LeadContactBuilderColumnHeader } from './header';
 
 type ProfileLink = {
@@ -11,7 +10,7 @@ type ProfileLink = {
 };
 
 /**
- * Builder column: contact header + business context, profiles, emails (mirrors YouTube studio builder).
+ * Builder column: contact header + business context and profiles.
  */
 export const LeadContactBuilderColumn = () => {
   const currentLead = useAppSelector((state) => state.currentLead);
@@ -59,10 +58,6 @@ export const LeadContactBuilderColumn = () => {
               ))}
             </div>
           </section>
-
-          <section className={styles.emailCard}>
-            <LeadContactEmails />
-          </section>
         </div>
       </div>
     </div>
@@ -80,7 +75,6 @@ const styles = {
   card: `
     rounded-xl border border-gray-200 bg-white p-5 shadow-sm
   `,
-  emailCard: `min-w-0`,
   cardTitle: `text-sm font-semibold text-gray-900`,
   businessName: `
     mt-2 text-base font-medium text-gray-900

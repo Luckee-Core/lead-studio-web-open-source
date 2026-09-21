@@ -1,12 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { Users, Mail, Phone, Send, UserCircle } from 'lucide-react';
-import {
-  LEAD_EMAIL_QUEUE_PATH,
-  LEAD_SENT_EMAILS_PATH,
-  TO_CALL_LOG_PATH,
-} from '@/config/routes';
+import { Users, Phone, UserCircle } from 'lucide-react';
+import { TO_CALL_LOG_PATH } from '@/config/routes';
 
 const LINKS = [
   {
@@ -26,18 +22,6 @@ const LINKS = [
     description: 'People and roles',
     href: '/lead-contacts',
     Icon: UserCircle,
-  },
-  {
-    label: 'Email queue',
-    description: 'Scheduled outbound sends',
-    href: LEAD_EMAIL_QUEUE_PATH,
-    Icon: Mail,
-  },
-  {
-    label: 'Sent emails',
-    description: 'Delivery history',
-    href: LEAD_SENT_EMAILS_PATH,
-    Icon: Send,
   },
 ] as const;
 
